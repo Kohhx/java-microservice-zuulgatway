@@ -6,8 +6,10 @@ spring:
     name: AUTH-SERVICE
   datasource:
     url: jdbc:postgresql://localhost:5432/testauthservicedb
-    username: kohhx
-    password: kohhx
+#    username: kohhx
+#    password: kohhx
+    username: postgres
+    password: Hexiang6
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:

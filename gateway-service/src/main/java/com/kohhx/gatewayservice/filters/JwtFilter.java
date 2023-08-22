@@ -48,6 +48,7 @@ public class JwtFilter extends ZuulFilter {
             String token = authorizationHeader.substring(7);
             try {
                 jwtService.validateToken(token);
+                ctx.addZuulRequestHeader("token", token);
             } catch (Exception e) {
                 throw new ZuulException("Invalid Token", 401, "Invalid Token");
             }
